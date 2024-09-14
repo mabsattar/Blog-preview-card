@@ -1,14 +1,7 @@
-:root {
-  --font-family: "Figtree", sans-serif;
-  --gray-light: hsl(0, 0%, 42%);
-  --gray-dark: hsl(0, 0%, 7%);
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--font-family);
 }
 
 body {
@@ -30,12 +23,14 @@ body {
 
 .card {
   background-color: hsl(0, 0%, 100%);
-  width: 300px;
-  max-height: 55vh;
+  width: 90%; /* Adjusts the width to 90% of the viewport */
+  max-width: 400px; /* Limits the max width on large screens */
+  height: auto; /* Let height grow naturally with content */
   border-radius: 15px;
-  border: 6px solid black;
+  border: 9px solid black;
   border-left: 1px solid black;
   border-top: 1px solid black;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   transition: 0.3s ease;
 }
@@ -44,7 +39,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px;
+  height: 25vh; /* Relative to viewport height */
   overflow: hidden;
 }
 
@@ -56,55 +51,59 @@ body {
 }
 
 .card-content {
-  padding: 15px;
-  margin-bottom: 10px;
+  padding: 2vh; /* Relative to viewport height for better responsiveness */
+  margin-bottom: 2vh;
+  font-family: "Figtree", sans-serif;
 }
 
 .label {
-  display: block;
+  display: inline-block;
   background-color: #f2c94c;
   color: #000000;
-  font-size: 12px;
+  font-size: 1rem;
   font-weight: bold;
-  padding: 2px 10px;
+  padding: 0.2rem 1rem;
   border-radius: 3px;
-  width: max-content;
-  margin-bottom: 18px;
+  margin-bottom: 1.5vh;
 }
 
 .date-time {
-  font-size: 12px;
-  margin-bottom: 10px;
-  font-weight: 500;
+  font-size: 0.9rem;
+  margin-bottom: 1vh;
+  font-weight: 600;
+  font-family: "Figtree";
 }
 
 .card-title {
-  padding-top: 5px;
-  margin-bottom: 10px;
+  padding-bottom: 0.5vh;
+  margin-bottom: 1vh;
+  margin-top: 2vh;
+  font-family: "Figtree";
+  font-size: 1.2rem;
+  font-weight: bolder;
 }
 
 .card-description {
-  font-size: 12px;
-  margin-bottom: 10px;
-  font-weight: 500;
+  font-size: 1rem;
+  padding-bottom: 1vh;
+  color: gray;
 }
 
 .author-info {
-  margin-top: 10px;
-  padding-top: 15px;
+  margin-top: 1vh;
   display: flex;
   align-items: center;
 }
 
 .author-info img {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   object-fit: cover;
 }
 
 .author-name {
-  font-size: x-small;
-  font-style: normal;
-  font-weight: bold;
+  font-size: 0.8rem;
+  font-weight: bolder;
   margin-left: 10px;
+  font-style: normal;
 }
